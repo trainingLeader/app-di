@@ -3,12 +3,17 @@ package com.di.app.app_di.services;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import com.di.app.app_di.models.Product;
-import com.di.app.app_di.repositories.ProductRepositoryImpl;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
+import com.di.app.app_di.models.Product;
+import com.di.app.app_di.repositories.ProductRepository;
+
+@Service
 public class ProductServiceImpl implements ProductService {
 
-    private ProductRepositoryImpl repositoryProduct = new ProductRepositoryImpl();
+    @Autowired
+    private ProductRepository repositoryProduct;
 
     public List<Product> findAll(){
         return repositoryProduct.findAll().stream().map(p ->{

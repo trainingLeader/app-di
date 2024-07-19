@@ -2,9 +2,11 @@ package com.di.app.app_di.repositories;
 
 import java.util.Arrays;
 import java.util.List;
+import org.springframework.stereotype.Repository;
 
 import com.di.app.app_di.models.Product;
 
+@Repository
 public class ProductRepositoryImpl implements ProductRepository {
         List<Product> products;
 
@@ -30,5 +32,4 @@ public class ProductRepositoryImpl implements ProductRepository {
         public Product findById(Long id){
             return products.stream().filter(p -> p.getId().equals(id)).findFirst().orElseThrow();
         }
-
 }
