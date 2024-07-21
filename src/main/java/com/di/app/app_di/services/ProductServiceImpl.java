@@ -5,6 +5,7 @@ import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 import com.di.app.app_di.models.Product;
@@ -16,6 +17,9 @@ public class ProductServiceImpl implements ProductService {
 
     private ProductRepository repositoryProduct;
 
+    @Value("${config.tax.price}")
+    private double tax;
+
     @Autowired
     public void setRepositoryProduct(@Qualifier("productList")ProductRepository repositoryProduct) {
         this.repositoryProduct = repositoryProduct;
@@ -24,7 +28,7 @@ public class ProductServiceImpl implements ProductService {
 
     public List<Product> findAll(){
         return repositoryProduct.findAll().stream().map(p ->{
-            Double priceTax = p.getPrice() * 1.25d;
+            Double priceTax = p.getPrice() * tax;
             Product newProd = (Product) p.clone();
             newProd.setPrice(priceTax.longValue());
             // p.setPrice(priceTax.longValue());
