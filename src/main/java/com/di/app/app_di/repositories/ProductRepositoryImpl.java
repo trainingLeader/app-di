@@ -12,16 +12,16 @@ public class ProductRepositoryImpl implements ProductRepository {
 
         public ProductRepositoryImpl() {
             this.products = Arrays.asList(
-                new Product(1L, "Laptop", 4500000L),
-                new Product(2L, "Smartphone", 2000000L),
-                new Product(3L, "Tablet", 1200000L),
-                new Product(4L, "Monitor", 800000L),
-                new Product(5L, "Keyboard", 150000L),
-                new Product(6L, "Mouse", 80000L),
-                new Product(7L, "Printer", 700000L),
-                new Product(8L, "External Hard Drive", 350000L),
-                new Product(9L, "Headphones", 200000L),
-                new Product(10L, "Webcam", 250000L)               
+                new Product(1L, "Laptop", 450L),
+                new Product(2L, "Smartphone", 200L),
+                new Product(3L, "Tablet", 120L),
+                new Product(4L, "Monitor", 800L),
+                new Product(5L, "Keyboard", 150L),
+                new Product(6L, "Mouse", 800L),
+                new Product(7L, "Printer", 700L),
+                new Product(8L, "External Hard Drive", 350L),
+                new Product(9L, "Headphones", 200L),
+                new Product(10L, "Webcam", 250L)               
             );
         }
         @Override

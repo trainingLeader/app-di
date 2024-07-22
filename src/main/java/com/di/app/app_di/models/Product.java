@@ -38,5 +38,4 @@ public class Product implements Cloneable {
             return new Product(this.id, this.name, this.price);
         }
     }
-    
 }

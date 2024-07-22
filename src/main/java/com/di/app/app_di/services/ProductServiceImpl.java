@@ -18,10 +18,10 @@ public class ProductServiceImpl implements ProductService {
     public List<Product> findAll(){
         return repositoryProduct.findAll().stream().map(p ->{
             Double priceTax = p.getPrice() * 1.45d;
-            // Product newProduct = new Product(p.getId(), p.getName(), priceImp.longValue());
+            // Product newProduct = new Product(p.getId(), p.getName(), priceTax.longValue());
             Product newProduct = (Product) p.clone();
-            // p.setPrice(priceImp.longValue());
             newProduct.setPrice(priceTax.longValue());
+            // newProduct.setPrice(priceTax.longValue());
             return newProduct;
         }).collect(Collectors.toList());
     }
