@@ -21,7 +21,7 @@ public class ProductServiceImpl implements ProductService {
     private double tax;
 
     @Autowired
-    public void setRepositoryProduct(@Qualifier("productList")ProductRepository repositoryProduct) {
+    public void setRepositoryProduct(@Qualifier("productJson")ProductRepository repositoryProduct) {
         this.repositoryProduct = repositoryProduct;
     }
     

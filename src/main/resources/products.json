@@ -1,0 +1,52 @@
+[
+	{
+		"id": 1,
+		"name": "Laptop",
+		"price": 562
+	},
+	{
+		"id": 2,
+		"name": "Smartphone",
+		"price": 250
+	},
+	{
+		"id": 3,
+		"name": "Tablet",
+		"price": 150
+	},
+	{
+		"id": 4,
+		"name": "Monitor",
+		"price": 1000
+	},
+	{
+		"id": 5,
+		"name": "Keyboard",
+		"price": 187
+	},
+	{
+		"id": 6,
+		"name": "PlayStation 5",
+		"price": 1000
+	},
+	{
+		"id": 7,
+		"name": "Printer",
+		"price": 875
+	},
+	{
+		"id": 8,
+		"name": "External Hard Drive",
+		"price": 437
+	},
+	{
+		"id": 9,
+		"name": "PlayStation",
+		"price": 1000
+	},
+	{
+		"id": 10,
+		"name": "Webcam Logitech",
+		"price": 312
+	}
+]
